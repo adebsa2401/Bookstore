@@ -35,9 +35,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Math Magicians <a name="about-project"></a>
+# 📖 Bookstore <a name="about-project"></a>
 
-> **WikiShow** is a website on which the user can make simple calculations like addition, substraction, division, etc. Moreover, he can also see some quotes.
+> **Bookstore** is a website on which the user can add and remove a book. He may also see the books list and categories
 
 ## 🛠 Built With <a name="built-with"></a>
 
