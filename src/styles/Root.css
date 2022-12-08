@@ -33,7 +33,7 @@ nav {
 }
 
 .nav-link {
-  opacity: .5;
+  opacity: 0.5;
   font-family: "Montserrat", sans-serif;
   font-size: 0.813rem;
   color: #121212;

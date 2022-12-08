@@ -36,7 +36,8 @@
   grid-area: progress;
 }
 
-.progress-percentage, .progress-text {
+.progress-percentage,
+.progress-text {
   font-family: "Montserrat", sans-serif;
   color: #121212;
 }
@@ -48,7 +49,7 @@
 }
 
 .progress-text {
-  font-size: .875rem;
-  opacity: .5;
+  font-size: 0.875rem;
+  opacity: 0.5;
   grid-area: status;
 }
