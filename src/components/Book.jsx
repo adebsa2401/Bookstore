@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import List from './List';
+import '../styles/Book.css';
 
 export default class Book extends React.PureComponent {
   render() {
@@ -9,8 +10,8 @@ export default class Book extends React.PureComponent {
     const category = 'Action';
 
     return (
-      <div>
-        <div>
+      <div className="book-card">
+        <div className="book-info">
           <h3>{ category }</h3>
           <h2>{ title }</h2>
           <h3>{ author }</h3>

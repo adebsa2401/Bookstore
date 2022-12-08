@@ -1,0 +1,54 @@
+.book-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  padding: 2rem;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-container {
+  display: grid;
+  column-gap: 0.5rem;
+  grid-template-areas:
+    "progress percentage"
+    "progress status"
+    "progress .";
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.63rem 0.625rem 0.75rem 0.75rem;
+  border: 5px solid #307bbe;
+  border-radius: 50%;
+  border-left-color: #e8e8e8;
+  transform: rotate(45deg);
+  grid-area: progress;
+}
+
+.progress-percentage, .progress-text {
+  font-family: "Montserrat", sans-serif;
+  color: #121212;
+}
+
+.progress-percentage {
+  font-size: 2rem;
+  grid-area: percentage;
+  margin: auto;
+}
+
+.progress-text {
+  font-size: .875rem;
+  opacity: .5;
+  grid-area: status;
+}

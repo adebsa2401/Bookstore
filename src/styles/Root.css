@@ -47,3 +47,7 @@ nav {
 main {
   padding: 4%;
 }
+
+ul {
+  list-style: none;
+}
