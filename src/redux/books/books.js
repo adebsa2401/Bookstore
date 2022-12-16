@@ -1,7 +1,25 @@
 const ADD = 'bookstore/books/ADD';
 const REMOVE = 'bookstore/books/REMOVE';
 
-const initialState = [];
+const initialState = [
+  {
+    id: new Date().getTime(),
+    title: 'The Hunger Games',
+    author: 'Suzanne Collins',
+  },
+
+  {
+    id: new Date().getTime() + 1,
+    title: 'Dune',
+    author: 'Frank Herbert',
+  },
+
+  {
+    id: new Date().getTime() + 2,
+    title: 'Capital in the Twenty-First Century',
+    author: 'Suzanne Collins',
+  },
+];
 
 export const addBook = (payload) => ({
   type: ADD,

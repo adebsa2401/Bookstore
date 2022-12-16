@@ -1,10 +1,12 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import {
   createHashRouter, createRoutesFromElements, Route, RouterProvider,
 } from 'react-router-dom';
 import BooksPage from './pages/BooksPage';
 import CategoriesPage from './pages/CategoriesPage';
 import Root from './pages/Root';
+import store from './redux/configureStore';
 
 export default function App() {
   const router = createHashRouter(
@@ -17,6 +19,8 @@ export default function App() {
   );
 
   return (
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   );
 }
