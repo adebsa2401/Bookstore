@@ -1,11 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import List from './List';
 import '../styles/Book.css';
+import { removeBook } from '../redux/books/books';
 
-export default function Book({ title, author }) {
+export default function Book({ id, title, author }) {
   const category = 'Action';
+  const dispatch = useDispatch();
+
+  const handleRemoveBook = () => {
+    dispatch(removeBook(id));
+  };
 
   return (
     <div className="book-card">
@@ -15,9 +21,9 @@ export default function Book({ title, author }) {
         <h3>{ author }</h3>
 
         <List separator={<div className="vertical-separator" />}>
-          <Link to="javacript:void(0)">Comments</Link>
-          <Link to="javacript:void(0)">Remove</Link>
-          <Link to="javacript:void(0)">Edit</Link>
+          <button type="button">Comments</button>
+          <button type="button" onClick={handleRemoveBook}>Remove</button>
+          <button type="button">Edit</button>
         </List>
       </div>
 
@@ -39,6 +45,7 @@ export default function Book({ title, author }) {
 }
 
 Book.propTypes = {
+  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
 };

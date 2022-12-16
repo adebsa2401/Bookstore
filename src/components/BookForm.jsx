@@ -10,12 +10,14 @@ export default function BookForm() {
   const handleAddBook = (event) => {
     event.preventDefault();
     dispatch(addBook({ id: new Date().getTime(), title, author }));
+    setTitle('');
+    setAuthor('');
   };
 
   return (
     <form onSubmit={handleAddBook}>
-      <input type="text" placeholder="Title" onChange={(event) => setTitle(event.target.value)} />
-      <input type="text" placeholder="Author" onChange={(event) => setAuthor(event.target.value)} />
+      <input type="text" placeholder="Title" value={title} onChange={(event) => setTitle(event.target.value)} />
+      <input type="text" placeholder="Author" value={author} onChange={(event) => setAuthor(event.target.value)} />
       <button type="submit" onClick={handleAddBook}>Add book</button>
     </form>
   );

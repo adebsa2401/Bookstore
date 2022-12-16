@@ -11,7 +11,14 @@ export default function BooksPage() {
   return (
     <div>
       <List className="books-list">
-        {books.map((book) => <Book key={book.id} title={book.title} author={book.author} />)}
+        {books.map((book) => (
+          <Book
+            key={book.id}
+            id={book.id}
+            title={book.title}
+            author={book.author}
+          />
+        ))}
       </List>
 
       <hr />
