@@ -4,22 +4,20 @@ import BookForm from '../components/BookForm';
 import List from '../components/List';
 import '../styles/BooksPage.css';
 
-export default class BooksPage extends React.PureComponent {
-  render() {
-    return (
-      <div>
-        <List className="books-list">
-          <Book title="The Hunger Games" author="Suzanne Collins" />
-          <Book title="Dune" author="Frank Herbert" />
-          <Book title="Capital in the Twenty-First Century" author="Suzanne Collins" />
-        </List>
+export default function BooksPage() {
+  return (
+    <div>
+      <List className="books-list">
+        <Book title="The Hunger Games" author="Suzanne Collins" />
+        <Book title="Dune" author="Frank Herbert" />
+        <Book title="Capital in the Twenty-First Century" author="Suzanne Collins" />
+      </List>
 
-        <hr />
+      <hr />
 
-        <h2>Add new book</h2>
+      <h2>Add new book</h2>
 
-        <BookForm />
-      </div>
-    );
-  }
+      <BookForm />
+    </div>
+  );
 }

@@ -6,19 +6,17 @@ import BooksPage from './pages/BooksPage';
 import CategoriesPage from './pages/CategoriesPage';
 import Root from './pages/Root';
 
-export default class App extends React.PureComponent {
-  render() {
-    const router = createHashRouter(
-      createRoutesFromElements(
-        <Route path="/" element={<Root />}>
-          <Route path="/" element={<BooksPage />} />
-          <Route path="/categories" element={<CategoriesPage />} />
-        </Route>,
-      ),
-    );
+export default function App() {
+  const router = createHashRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<Root />}>
+        <Route path="/" element={<BooksPage />} />
+        <Route path="/categories" element={<CategoriesPage />} />
+      </Route>,
+    ),
+  );
 
-    return (
-      <RouterProvider router={router} />
-    );
-  }
+  return (
+    <RouterProvider router={router} />
+  );
 }
