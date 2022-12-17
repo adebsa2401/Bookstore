@@ -9,6 +9,7 @@ import '../styles/BooksPage.css';
 const useBooks = () => {
   const dispatch = useDispatch();
   const books = useSelector((state) => state.books);
+  books.sort((a, b) => a.id - b.id);
 
   useEffect(() => {
     dispatch(loadBooks());
@@ -34,9 +35,9 @@ export default function BooksPage() {
         ))}
       </List>
 
-      <hr />
+      <hr className="hr-divider" />
 
-      <h2>Add new book</h2>
+      <h2 className="new-book-label">Add new book</h2>
 
       <BookForm />
     </div>

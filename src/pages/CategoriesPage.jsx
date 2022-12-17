@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { checkStatus } from '../redux/categories/categories';
+import '../styles/CategoriesPage.css';
 
 export default function CategoriesPage() {
   const dispatch = useDispatch();
@@ -12,8 +13,8 @@ export default function CategoriesPage() {
 
   return (
     <div>
-      <button type="button" onClick={handleCheckStatus}>Check status</button>
-      <h1>{categories}</h1>
+      <button className="btn-primary" type="button" onClick={handleCheckStatus}>Check status</button>
+      <h1 className="status-label">{categories}</h1>
     </div>
   );
 }

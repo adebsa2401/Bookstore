@@ -3,3 +3,17 @@
   flex-direction: column;
   gap: 0.938rem;
 }
+
+.hr-divider {
+  height: 0.5px;
+  background-color: #e8e8e8;
+  width: 100%;
+  margin: 2.5rem 0 1.813rem;
+}
+
+.new-book-label {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.18px;
+  color: #888;
+}
