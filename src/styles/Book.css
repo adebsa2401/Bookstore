@@ -10,7 +10,9 @@
 
 .book-info {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
+  width: 50%;
 }
 
 .progress-container {
@@ -52,4 +54,84 @@
   font-size: 0.875rem;
   opacity: 0.5;
   grid-area: status;
+}
+
+.btn-link {
+  background-color: transparent;
+  color: #4386bf;
+  border: none;
+  cursor: pointer;
+}
+
+.hr-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.vertical-separator {
+  width: 0.125rem;
+  height: 1.5rem;
+  background-color: #e8e8e8;
+}
+
+.xl-separator {
+  height: 4.375rem;
+}
+
+.book-category {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  color: #121212;
+  opacity: 0.5;
+}
+
+.book-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  color: #121212;
+}
+
+.book-author {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  color: #121212;
+  font-weight: 300;
+  color: #4386bf;
+}
+
+.current-chapter {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.current-chapter-label {
+  font-family: "Roboto Slab",serif;
+  color: #121212;
+  font-weight: 300;
+  font-size: 0.813rem;
+  opacity: 0.5;
+}
+
+.progress-current-chapter {
+  font-family: "Roboto Slab",serif;
+  color: #121212;
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+
+.btn-primary {
+  background-color: #0290ff;
+  color: #fff;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 3px;
+  font-family: "Roboto Slab",serif;
+  font-size: 0.875rem;
+  cursor: pointer;
+  font-weight: 300;
+  letter-spacing: 0.5px;
 }

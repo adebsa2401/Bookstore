@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function List({ children, separator, ...props }) {
+export default function List({ children, separator, className }) {
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <ul {...props}>
+    <ul className={className}>
       {React.Children.map(children, (child, index) => (
         <>
           <li key={child.key}>
@@ -20,8 +19,10 @@ export default function List({ children, separator, ...props }) {
 List.propTypes = {
   children: PropTypes.node.isRequired,
   separator: PropTypes.node,
+  className: PropTypes.string,
 };
 
 List.defaultProps = {
   separator: null,
+  className: '',
 };

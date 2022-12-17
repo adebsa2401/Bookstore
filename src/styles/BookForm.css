@@ -1,0 +1,23 @@
+.book-form { 
+  display: flex; 
+  margin-top: 20px;
+  gap: 32px;
+}
+
+.book-form input {
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  font-size: 1rem;
+  letter-spacing: -.15px;
+  color: #121212;
+}
+
+.book-title-input {
+  width: 50%;
+}
+
+.book-author-input {
+  width: 25%;
+}
