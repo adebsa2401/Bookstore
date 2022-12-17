@@ -25,10 +25,20 @@ export const addBook = createAsyncThunk(
   },
 );
 
-export const removeBook = (payload) => ({
-  type: REMOVE,
-  payload,
-});
+export const removeBook = createAsyncThunk(
+  REMOVE,
+  async (payload) => {
+    const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/apps/${process.env.REACT_APP_API_ID}/books/${payload}`, {
+      method: 'DELETE',
+    });
+
+    if (response.ok) {
+      return payload;
+    }
+
+    throw new Error('Exception occurred while removing a book');
+  },
+);
 
 export const loadBooks = createAsyncThunk(
   LOAD,
@@ -44,17 +54,27 @@ export default (state = initialState, action) => {
   switch (action.type) {
     case `${ADD}/fulfilled`:
       return [...state, action.payload];
+
     case `${ADD}/rejected`:
       // eslint-disable-next-line no-alert
       alert(action.error.message);
       return state;
-    case REMOVE:
+
+    case `${REMOVE}/fulfilled`:
       return state.filter((book) => book.id !== action.payload);
+
+    case `${REMOVE}/rejected`:
+      // eslint-disable-next-line no-alert
+      alert(action.error.message);
+      return state;
+
     case `${LOAD}/fulfilled`:
       Object.entries(action.payload).forEach(([id, book]) => books.push({ id, ...book[0] }));
       return books;
+
     case `${LOAD}/rejected`:
       return [];
+
     default:
       return state;
   }
