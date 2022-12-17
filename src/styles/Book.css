@@ -97,7 +97,6 @@
 .book-author {
   font-family: "Montserrat", sans-serif;
   font-size: 0.875rem;
-  color: #121212;
   font-weight: 300;
   color: #4386bf;
 }
@@ -109,7 +108,7 @@
 }
 
 .current-chapter-label {
-  font-family: "Roboto Slab",serif;
+  font-family: "Roboto Slab", serif;
   color: #121212;
   font-weight: 300;
   font-size: 0.813rem;
@@ -117,7 +116,7 @@
 }
 
 .progress-current-chapter {
-  font-family: "Roboto Slab",serif;
+  font-family: "Roboto Slab", serif;
   color: #121212;
   font-weight: 300;
   font-size: 1.25rem;
@@ -129,7 +128,7 @@
   border: none;
   padding: 8px 24px;
   border-radius: 3px;
-  font-family: "Roboto Slab",serif;
+  font-family: "Roboto Slab", serif;
   font-size: 0.875rem;
   cursor: pointer;
   font-weight: 300;

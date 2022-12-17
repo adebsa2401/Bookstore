@@ -1,5 +1,5 @@
-.book-form { 
-  display: flex; 
+.book-form {
+  display: flex;
   margin-top: 20px;
   gap: 32px;
 }
@@ -10,7 +10,7 @@
   border: 1px solid #e8e8e8;
   background-color: #fff;
   font-size: 1rem;
-  letter-spacing: -.15px;
+  letter-spacing: 0.15px;
   color: #121212;
 }
 
