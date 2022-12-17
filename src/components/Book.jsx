@@ -45,7 +45,7 @@ export default function Book({ id, title, author }) {
 }
 
 Book.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
 };

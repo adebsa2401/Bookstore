@@ -9,7 +9,12 @@ export default function BookForm() {
 
   const handleAddBook = (event) => {
     event.preventDefault();
-    dispatch(addBook({ id: new Date().getTime(), title, author }));
+    dispatch(addBook({
+      item_id: new Date().getTime(),
+      title,
+      author,
+      category: 'Action',
+    }));
     setTitle('');
     setAuthor('');
   };
